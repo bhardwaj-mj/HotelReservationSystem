@@ -1,6 +1,8 @@
 package com.bridgelabz;
 
 import java.util.List;
+import java.util.Map;
+//import java.util.Map;
 
 public class HotelReservationSystemMain {
     public static void main(String[] args) {
@@ -14,5 +16,7 @@ public class HotelReservationSystemMain {
         hotelReservation.add(hotel3);
         List<Hotel> hotelList = hotelReservation.getHotelList();
         System.out.println(hotelList);
+        Map<Integer, Hotel> result = hotelReservation.searchFor("10-Sep-2020", "30-Sep-2020");
+        result.forEach((k, v) -> System.out.println(v.getName() + " " + k));
     }
 }
